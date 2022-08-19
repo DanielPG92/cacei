@@ -16,9 +16,9 @@ get usuarioDatos(){
 
 
   constructor(private http: HttpClient) { }
-  login(email: string, password: string) {
+  login(NombreCompleto: string, Contrasena: string) {
     const url = `${environment.apiUrl}/post/login`;
-    const body = { email, password}
+    const body = { NombreCompleto, Contrasena}
     return this.http.post<AuthResponse>(url, body)
       .pipe(
       tap( resp => {
@@ -41,8 +41,8 @@ get usuarioDatos(){
         map(resp =>{
           localStorage.setItem('token', resp.token!)
           this._usuario = {
-            name : resp.name!,
-            email: resp.email!
+            idProfesor : resp.idProfesor!,
+            NombreCompleto: resp.NombreCompleto!
           }
           return resp.ok;
         }),

@@ -5,6 +5,8 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomepagesComponent } from './homepages.component';
 import { LoginComponent } from './Components/login/login.component';
 import { RegisterComponent } from './Components/register/register.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -15,6 +17,8 @@ import { RegisterComponent } from './Components/register/register.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     HomeRoutingModule
   ]
 })

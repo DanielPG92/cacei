@@ -1,1 +1,85 @@
-<p>login works!</p>
+<div class="container w-75 bg-primary mb-3 mt-3 rounded shadow ">
+
+    <div class="row align-item-stretch">
+        <div class="col bg d-none d-lg-block  col-md-5 col-lg-5 col-xl-6 rounded">
+            <div class=""> <img class="" src="" alt="infoCovid"></div>
+        </div>
+        <div class="col bg-white p-5 rounded-end">
+
+            <div class="text-end">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkPyBnFAca4aMoxAedjxqw6bl6rffu1RAQCjynjVJxaDl7a5FySWQksoC2vnefcgHsvEo&usqp=CAU" width="48" alt="">
+            </div>
+
+            <h2 class="fw-bold text-center py-5">
+                Bienvenido
+            </h2>
+            <!-- LOGIN -->
+
+            <!-- <form (ngSubmit)="login(user.Email)" #loginForm="ngForm"> -->
+            <form autocomplete="off" [formGroup]="miFormulario" (ngSubmit)="login()">
+                <div class="mb-4">
+                    <label for="name" class="form-label">Ingresa El nombre</label>
+                    <!-- <input type="email" class="form-control" name="Email" id="Email" [(ngModel)]="user.Email"> -->
+                    <input class="form-control" type="text" formControlName="NombreCompleto" placeholder="Ingrese su nombre completo ">
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <!-- <input type="password" class="form-control" name="Password" id="Password" [(ngModel)]="user.Password"> -->
+                    <input class="form-control" type="password" formControlName="Contrasena" placeholder="Ingrese su contraseña">
+                </div>
+                <div class="mb-4">
+                    <input type="checkbox" name="connected" class="form-check-input" id="">
+                    <label for="connected" class="form-check-label">Mantenerme Conectado</label>
+                </div>
+                <div class="d-grid">
+                    <button class="btn btn-primary" type="submit">Iniciar Sesión</button>
+                </div>
+                <div class="my-3">
+                    <span>No tienes cuenta? <a href="/registro"> Registrate</a> </span><br>
+                    <span> <a href="#">Recuperar Password</a></span>
+                </div>
+
+            </form>
+
+            <!-- REDES SOCIALES -->
+
+            <div class="container w-100 my-5">
+                <div class="row text-center">
+                    <div class="col-12">Iniciar Sesion</div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-outline-primary w-100 my-1">
+                            <div class="row align-item-center">
+                                <div class="col-2 d-none d-md-block">
+                                    <img src="https://logodownload.org/wp-content/uploads/2014/09/facebook-logo-3-1.png" width="32" alt="">
+
+                                </div>
+                                <div class="col-12 col-md-10 text-center">
+Facebook
+                                </div>
+
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-outline-danger w-100 my-1">
+                            <div class="row align-item-center">
+                                <div class="col-2 d-none d-md-block">
+                                    <img src="https://rotulosmatesanz.com/wp-content/uploads/2017/09/2000px-Google_G_Logo.svg_.png" width="32" alt="">
+
+                                </div>
+                                <div class="col-12 col-md-10 text-center">
+Google
+                                </div>
+
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

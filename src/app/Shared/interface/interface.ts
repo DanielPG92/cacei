@@ -1,12 +1,13 @@
 export interface Usuario{
-    name: string;
-    email: string;
+    idProfesor: string;
+    NombreCompleto: string;
   }
   
   export interface AuthResponse{
     ok: boolean,
-    email?: string,
-    name?: string,
+    msg?: string,
+    NombreCompleto?: string,
+    idProfesor?: string,
     token?: string,
-    msg?: string
+   
   }
