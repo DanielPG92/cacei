@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ProfesorpagesComponent } from './profesorpages.component';
+import { CedulaUnoComponent } from './cedula-uno.component';
 
-describe('ProfesorpagesComponent', () => {
-  let component: ProfesorpagesComponent;
-  let fixture: ComponentFixture<ProfesorpagesComponent>;
+describe('CedulaUnoComponent', () => {
+  let component: CedulaUnoComponent;
+  let fixture: ComponentFixture<CedulaUnoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProfesorpagesComponent ]
+      declarations: [ CedulaUnoComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ProfesorpagesComponent);
+    fixture = TestBed.createComponent(CedulaUnoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

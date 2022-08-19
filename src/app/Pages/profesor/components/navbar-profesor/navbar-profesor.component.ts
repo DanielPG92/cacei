@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/Shared/auth.service';
 
 @Component({
   selector: 'app-navbar-profesor',
@@ -7,8 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarProfesorComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router, private authService:AuthService) { }
+  get usuario(){
+    return this.authService.usuarioDatos;
+  }
+    cedula1(): void{
+    this.router.navigate(['profesor/cedulauno/',this.usuario.idProfesor])
+    }
 
+  
   ngOnInit(): void {
   }
 

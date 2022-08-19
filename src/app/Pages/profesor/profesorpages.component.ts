@@ -4,7 +4,7 @@ import { AuthService } from 'src/app/Shared/auth.service';
 @Component({
   selector: 'app-profesorpages',
   templateUrl: './profesorpages.component.html',
-  styleUrls: ['./profesorpages.component.css']
+  
 })
 export class ProfesorpagesComponent implements OnInit {
 

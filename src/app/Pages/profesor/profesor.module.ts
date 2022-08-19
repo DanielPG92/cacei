@@ -4,17 +4,22 @@ import { CommonModule } from '@angular/common';
 import { ProfesorRoutingModule } from './profesor-routing.module';
 import { ProfesorpagesComponent } from './profesorpages.component';
 import { NavbarProfesorComponent } from './components/navbar-profesor/navbar-profesor.component';
-import { Cedula1Component } from './components/cedula1/cedula1.component';
+import { CedulaUnoComponent } from './components/cedula-uno/cedula-uno.component';
+import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     ProfesorpagesComponent,
     NavbarProfesorComponent,
-    Cedula1Component
+    CedulaUnoComponent,
+   
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     ProfesorRoutingModule
   ]
 })
