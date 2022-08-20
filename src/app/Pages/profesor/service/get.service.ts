@@ -16,4 +16,8 @@ export class GetService {
     getProfesor(idProfesor:string): Observable<Profesor>{
       return this.http.get<Profesor>(environment.apiUrl + '/get/profesor/' + idProfesor);
     }
+
+    getProfesores(): Observable<any>{
+      return this.http.get<any>(environment.apiUrl + "/get/usuarios");
+    }
 }

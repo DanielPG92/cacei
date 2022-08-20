@@ -1,0 +1,21 @@
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th *ngFor="let columnas of columns; let i = index">{{columnas}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let usuarios of data">
+
+                <td>{{usuarios.NombreCompleto}}</td>
+                <td>{{usuarios.Licenciatura}}</td>
+                <td>{{usuarios.Especialidad}}</td>
+                <td>{{usuarios.Maestria}}</td>
+                <td>{{usuarios.Doctorado}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <button class="btn btn-primary" (click)="exportExcel()">Exportar tabla </button>
+</div>

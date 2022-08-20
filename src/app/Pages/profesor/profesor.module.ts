@@ -7,6 +7,10 @@ import { NavbarProfesorComponent } from './components/navbar-profesor/navbar-pro
 import { CedulaUnoComponent } from './components/cedula-uno/cedula-uno.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ExcelComponent } from './components/excel/excel.component';
+
+
+
 
 
 @NgModule({
@@ -14,11 +18,13 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProfesorpagesComponent,
     NavbarProfesorComponent,
     CedulaUnoComponent,
+    ExcelComponent,
    
   ],
   imports: [
     CommonModule,
     FormsModule,
+    
     ReactiveFormsModule,
     ProfesorRoutingModule
   ]
