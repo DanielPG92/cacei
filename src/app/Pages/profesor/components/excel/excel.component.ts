@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ExcelService } from '../../service/excel.service';
+import { GetService } from '../../service/get.service';
 
 @Component({
   selector: 'app-excel',
@@ -11,20 +12,25 @@ data: any [] =[];
 columns : any[] =[];
 footerDate: any[] =[];
 totalSalesAmount = 0;
+profesores: any[] = [];
 
-  constructor(public excelService:ExcelService) { }
+  constructor(public excelService:ExcelService, private getService: GetService) { }
 
   ngOnInit(): void {
+    this.getService.getProfesores().subscribe(res =>{
+      this.data=res;
+    })
+  
     this.columns=['NombreCompleto','Licenciatura','Especialidad','Maestria','Doctorado'];
-    this.data =[
-      {
-        NombreCompleto: "Usiel",
-        Licenciatura: "Ing En Sistemas Computacionales",
-        Especialidad: "Administracion de redes",
-        Maestria: "Null",
-        Doctorado: "Null"
-      }
-    ]
+    // this.data =[
+    //   {
+    //     NombreCompleto: "Usiel",
+    //     Licenciatura: "Ing En Sistemas Computacionales",
+    //     Especialidad: "Administracion de redes",
+    //     Maestria: "Null",
+    //     Doctorado: "Null"
+    //   }
+    // ]
   
   }
 
