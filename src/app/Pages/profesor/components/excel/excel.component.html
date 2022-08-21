@@ -61,5 +61,8 @@
 
         </tbody>
     </table>
-    <button class="btn btn-primary" (click)="exportExcel()">Exportar tabla </button>
+    <div *ngIf="bandera">
+        <button class="btn btn-primary" (click)="exportExcel()">Exportar tabla </button>
+    </div>
+
 </div>

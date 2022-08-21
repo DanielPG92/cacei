@@ -11,6 +11,7 @@ import { PostService } from '../../service/post.service';
 })
 export class ExcelComponent implements OnInit {
 data: any [] =[];
+bandera=false;
 columns : any[] =[];
 footerDate: any[] =[];
 totalSalesAmount = 0;
@@ -57,7 +58,7 @@ this.excelService.exportAsExcelFile(`${Licenciatura} Periodo ${Perido}`, '', thi
       const Perido= String(this.form.controls.Perido.value);
      
       this.postService.postCacei(Licenciatura,Perido).subscribe(res =>{
-         
+         this.bandera=true;
         console.log(res);
         this.data=res;
 
