@@ -64,10 +64,24 @@ this.excelService.exportAsExcelFile(`${Licenciatura} Periodo ${Perido}`, '', thi
 
       })
     }
-  
+
 
   }
 
- 
+  verPorPeriodo(){
+    if(this.form.controls.Licenciatura.value){
+      const Licenciatura = String(this.form.controls.Licenciatura.value);
+      const Perido= String(this.form.controls.Perido.value);
+     
+      this.postService.postCacei(Licenciatura,Perido).subscribe(res =>{
+     
+        console.log(res);
+        this.data=res;
+
+      })
+    }
+
+
+  }
 
 }
