@@ -26,3 +26,16 @@
     Doctorado= "";
     NoDoctorado= "";
   }
+
+  export interface Consulta{
+    Licenciatura: string,
+    Perido: string
+  }
+
+  export interface HorarioOmar{
+    Hora_visita:string,
+    idHorario:number,
+    Fecha:string,
+    otrodato?:string,
+  }
+  
