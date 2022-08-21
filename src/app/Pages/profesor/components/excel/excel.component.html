@@ -1,4 +1,23 @@
 <div class="container">
+    <form action="user" autocomplete="off" [formGroup]="form">
+        <span class="input-group-text">Seleccione la carrera</span>
+        <select class="form-select" aria-label="Default select example" formControlName="Licenciatura">
+            <option value="Sistemas" selected>Sistemas</option>
+            <option value="Quimica">Quimica</option>
+          </select>
+
+        <span class="input-group-text">Seleccione el periodo</span>
+        <select class="form-select" aria-label="Default select example" formControlName="Perido" (click)="verPorcarrera()">
+            <option value="2022" selected >2022</option>
+            <option value="2021" >2021</option>
+          </select>
+
+    </form>
+
+</div>
+
+<div class="container">
+
     <table class="table">
         <thead>
             <tr>
@@ -8,11 +27,36 @@
         <tbody>
             <tr *ngFor="let usuarios of data">
 
+                <td>{{usuarios.Numero_Profesor}}</td>
                 <td>{{usuarios.NombreCompleto}}</td>
+                <td>{{usuarios.Edad}}</td>
+                <td>{{usuarios.Tiempo_de_dicacion}}</td>
+                <td>{{usuarios.Estatus_de_contratacion}}</td>
+                <td>{{usuarios.Institucion}}</td>
+                <td>{{usuarios.En_el_PE}}</td>
                 <td>{{usuarios.Licenciatura}}</td>
+                <td>{{usuarios.Nolicenciatura}}</td>
                 <td>{{usuarios.Especialidad}}</td>
+                <td>{{usuarios.NoEspecialidad}}</td>
                 <td>{{usuarios.Maestria}}</td>
+                <td>{{usuarios.NoMaestria}}</td>
                 <td>{{usuarios.Doctorado}}</td>
+                <td>{{usuarios.NoDoctorado}}</td>
+                <td>{{usuarios.Mayor_grado_Academico}}</td>
+                <td>{{usuarios.Capacitacion_en_docencial}}</td>
+                <td>{{usuarios.Actualizacion_disiplinar}}</td>
+                <td>{{usuarios.Participacion_en_colegios}}</td>
+                <td>{{usuarios.Experiencia_profecional_no_academica}}</td>
+                <td>{{usuarios.Experiencia_profecional_en_diseno_ingenieril}}</td>
+                <td>{{usuarios.TSU}}</td>
+                <td>{{usuarios.Curso_Posgrado}}</td>
+                <td>{{usuarios.Curso_Eduacion_continua}}</td>
+                <td>{{usuarios.Evaluacion_de_los_cursos_impartidos_TSU}}</td>
+                <td>{{usuarios.TSU_ULTIMO}}</td>
+                <td>{{usuarios.Cursos_Licenciatura_Ultimo}}</td>
+                <td>{{usuarios.Curso_Posgrado_Ultimo}}</td>
+                <td>{{usuarios.Curso_Eduacion_continua_Ultimo}}</td>
+                <td>{{usuarios.Evaluacion_de_los_cursos_impartidos_TSU_Ultimo}}</td>
             </tr>
 
         </tbody>

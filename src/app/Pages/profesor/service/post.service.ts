@@ -10,9 +10,9 @@ export class PostService {
 
   constructor(private http:HttpClient) { }
 
-  postHoraOmar(Licenciatura:string,Perido:string){
+  postCacei(Licenciatura:string,Periodo:string){
     const url = `${environment.apiUrl}/post/consulta`;
-        const body = { Licenciatura, Perido};
-        return this.http.post<Consulta[]>(url, body);
+        const body = { Licenciatura, Periodo};
+        return this.http.post<any>(url, body);
   }
 }
