@@ -46,17 +46,17 @@ constructor(public excelService:ExcelService, private getService: GetService, pr
   }
 
   exportExcel(){
-
-this.excelService.exportAsExcelFile('Prueba Uno', '', this.columns, this.data,'','pruebauno','Sheet1');
+    const Licenciatura = String(this.form.controls.Licenciatura.value);
+    const Perido= String(this.form.controls.Perido.value);
+this.excelService.exportAsExcelFile(`${Licenciatura} Periodo ${Perido}`, '', this.columns, this.data,'',`${Licenciatura}-${Perido}`,'Sheet1');
   }
 
   verPorcarrera(){
     if(this.form.controls.Perido.value){
       const Licenciatura = String(this.form.controls.Licenciatura.value);
       const Perido= String(this.form.controls.Perido.value);
-      const Licenciatura1 =String(Licenciatura);
-      const Periodo1=String(Perido);
-      this.postService.postCacei(Licenciatura1,Periodo1).subscribe(res =>{
+     
+      this.postService.postCacei(Licenciatura,Perido).subscribe(res =>{
          
         console.log(res);
         this.data=res;
